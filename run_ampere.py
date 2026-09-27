@@ -1,10 +1,4 @@
 """Stream AMPERE rotor measurements and compare fixed versus load references.
-
-The 5.73 GB source ZIP is never extracted.  Exactly one representation of each
-of the 400 rotor measurement pairs is read at a time: MATLAB v4 directly, or
-the paired CSV when a member uses unsupported MATLAB v5.  The stator branch is
-skipped.  Scores are aggregated to the 25 source condition-by-load experiment
-blocks because independence of the 16 numbered files per block is unresolved.
 """
 
 from __future__ import annotations
