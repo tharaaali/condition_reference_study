@@ -1,0 +1,33 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "condition-reference-study"
+version = "1.0.0"
+description = "Global versus load-matched healthy spectral references for induction-motor fault detection"
+readme = "README.md"
+requires-python = ">=3.10"
+dependencies = [
+  "numpy>=2.0,<3",
+  "Pillow>=10,<13",
+]
+
+[project.scripts]
+condition-reference-study = "run_study:main"
+
+[tool.setuptools]
+py-modules = [
+  "condition_reference",
+  "run_ampere",
+  "run_engine2",
+  "run_study",
+  "run_two_dataset_questions",
+]
+
+[tool.ruff]
+line-length = 88
+target-version = "py310"
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
